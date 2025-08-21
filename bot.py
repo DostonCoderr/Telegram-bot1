@@ -1,9 +1,10 @@
 import requests
+import os
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, CallbackQueryHandler, ContextTypes, filters
 
-TELEGRAM_TOKEN = "7565266404:AAFKzQAe5kfSIklO7ixGoKKbWQ7DhtRukXI"
-OPENROUTER_API_KEY = "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"
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
 
 API_URL = "https://openrouter.ai/api/v1/chat/completions"
